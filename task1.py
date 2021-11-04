@@ -4,7 +4,6 @@
 
 if __name__ == '__main__':
 
-    number_of_classes = 8
     school = {
         "1А": 32,
         "1Б": 25,
@@ -29,7 +28,7 @@ if __name__ == '__main__':
     for key, value in school.items():
         print(f" В {key} классе количество детей = {value}.")
 
-    # Часть б)
+    # Часть с)
     print("\nРасформировали один класс, теперь:\n")
     school.pop("1А")
     for key, value in school.items():

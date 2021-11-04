@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# variant 6
 
 import sys
 from datetime import datetime
@@ -62,7 +63,11 @@ if __name__ == '__main__':
                 if train.get("time") > time:
                     count += 1
                     print(
-                        '{:>4}: {} {}'.format(count, train.get('destination', ''), train.get("number"))
+                        '{:>4}: {} {}'.format(
+                            count,
+                            train.get('destination', ''),
+                            train.get("number")
+                        )
                     )
             if count == 0:
                 print("Отправлений позже этого времени нет.")
@@ -72,7 +77,8 @@ if __name__ == '__main__':
             print("Список команд:\n")
             print("add - добавить отправление;")
             print("list - вывести список отправлений;")
-            print("select <ЧЧ:ММ> - вывод на экран информации опоездах, отправляющихся после этого времени;")
+            print("select <ЧЧ:ММ> - вывод на экран информации о "
+                  "поездах, отправляющихся после этого времени;")
             print("help - отобразить справку;")
             print("exit - завершить работу с программой.")
         else:
